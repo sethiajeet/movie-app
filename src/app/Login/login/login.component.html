@@ -1,0 +1,21 @@
+<div class="fill" fxLayoutAlign="center center" fxFlexFill [ngClass]="darkTheme ? 'alternate' : ''" style="height: 1000px">
+    <mat-card fxFlex="25">
+        <mat-toolbar>Login Page</mat-toolbar>
+        <form [formGroup]="formGroup" (ngSubmit)="fireLogin()" fxLayoutAlign="stretch" fxLayout="column">
+            <mat-form-field>
+                <input matInput placeholder="username" formControlName="username">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="password" placeholder="password" formControlName="password">
+            </mat-form-field>
+            <br>
+            <button mat-raise-button type="submit" [disabled]="isRequested"> LOGIN </button>
+        </form>
+    </mat-card>
+</div>
+
+
+
+
+

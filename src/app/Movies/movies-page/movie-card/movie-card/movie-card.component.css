@@ -1,0 +1,8 @@
+.text-des{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal{
+    background-color: blueviolet;
+}

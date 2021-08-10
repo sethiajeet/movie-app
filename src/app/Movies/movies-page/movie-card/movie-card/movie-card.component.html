@@ -1,0 +1,23 @@
+<div fxLayoutAlign="center center" class="movie-card" style="margin-top: 20px; margin-bottom: 20px;" (click)="openModal()">
+    <mat-card style="width: 60%; height: 30%">
+        <mat-card-header>
+            <img mat-card-avatar>
+            <mat-card-title>
+                {{movieCard.title}}
+            </mat-card-title>
+        </mat-card-header>
+        <hr>
+        <mat-card-content class="text-des">
+            {{truncatedDescription}}
+        </mat-card-content> 
+        <mat-card-footer>
+            {{movieCard.genres}}
+        </mat-card-footer>
+    </mat-card>
+</div>
+
+<div style="display: none;">
+    <app-movie-modal [movieModal]="movieCardCopy()" [data]="data" 
+        [title]="movieCard.title" [genres]="movieCard.genres" [content]="movieCard.description"
+    ></app-movie-modal>
+</div>
